@@ -23,4 +23,6 @@ function onSubmitBtn(event) {
    } else {
       console.log(userData);
    }
+
+   event.currentTarget.reset();
 }
