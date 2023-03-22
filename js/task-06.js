@@ -9,10 +9,14 @@ const input = document.querySelector("#validation-input");
 const validLength = Number(input.dataset.length);
 
 function onCheckValidLength(event) {
-   if (Number(event.currentTarget.value.length === validLength)) {
+   const currentValueLength = Number(event.currentTarget.value.length);
+
+   if (currentValueLength === validLength) {
       input.classList.add("valid");
+      input.classList.remove("invalid");
    } else {
       input.classList.add("invalid");
+      input.classList.remove("valid");
    }
 }
 
