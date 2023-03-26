@@ -14,14 +14,15 @@ function onSubmitBtn(event) {
    // console.dir(event);
 
    const email = event.currentTarget.elements.email.value;
-   console.log(email);
    const password = event.currentTarget.elements.password.value;
    const userData = { email, password };
 
-   if (email.value === "" || password.value === "") {
+   if (email === "" && password === "") {
       alert("Заповність усі поля");
-   } else {
+   } else if (email !== "" && password !== "") {
       console.log(userData);
+   } else {
+      alert("Ви заповнили лише одне поле");
    }
 
    event.currentTarget.reset();
